@@ -2,20 +2,20 @@ pipeline{
     agent any
     stages{
         stage('Hello'){
-            steps{
+          steps{
                 sh 'echo Hello world'
             }
-            post{
-                successs{
-                    script{
-                        currentBuild.result = 'FAILURE'
+          post{
+              successs{
+                script{
+                    currentBuild.result = 'FAILURE'
                     }
                 }
             }
         }
-           post{
-            always{
-                echo currentBuild.currentResult
+    post{
+      always{
+         echo currentBuild.currentResult
             }
         }
     }
