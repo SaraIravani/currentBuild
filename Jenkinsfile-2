@@ -4,7 +4,6 @@ pipeline{
         stage('Hello'){
             steps{
                 sh 'echo Hello world'
-
             }
             post{
                 successs{
@@ -14,7 +13,7 @@ pipeline{
                 }
             }
         }
-        post{
+           post{
             always{
                 echo currentBuild.currentResult
             }
