@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage{
+        stage('Hello'){
             steps{
                 sh 'echo Hello world'
                 echo "Build number is ${currentBuild.number}"
